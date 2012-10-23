@@ -20,20 +20,20 @@ var Entity = Class.extend({
         PubSub.pub('destroyed', this);
 
         if ( this._group ) {
-            this._group.splice( this._group.indexOf(this), 1 );
+            this._group.splice( this._group.indexOf( this ), 1 );
         }
     },
 
     update: function()
     {
-        if (this._physics) {
+        if ( this._physics ) {
             this._physics.update();
         }
     },
 
     render: function()
     {
-        if (this._view) {
+        if ( this._view ) {
             this._view.render();
         }
     },
